@@ -4,6 +4,7 @@ import Navbar from "../common/Navbar";
 import { Route, Routes } from "react-router-dom";
 import HomeSection from "./HomeSection";
 import WorkspaceContainer from "../workspace/WorkspaceContainer";
+import CatalogContainer from "../catalog/CatalogContainer";
 
 const HomeContainer = () => {
   return (
@@ -14,6 +15,7 @@ const HomeContainer = () => {
         <Routes>
           <Route index path="/" element={<HomeSection />} />
           <Route path="/workspaces" element={<WorkspaceContainer />} />
+          <Route path="/catalog" element={<CatalogContainer />} />
           <Route path="*" element={<HomeSection />} />
         </Routes>
       </div>
