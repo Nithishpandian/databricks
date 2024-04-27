@@ -54,8 +54,8 @@ const WorkspaceContainer = () => {
             <h1 className=" text-stone-800 font-semibold">Workspaces</h1>
           </div>
           <p className=" text-sm text-stone-600 font-medium text-center">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Accusantium, fuga.
+            Your workspace is the environment for doing work in Databricks.
+            Create one to get started.
           </p>
           <div className=" flex items-center justify-center">
             <button

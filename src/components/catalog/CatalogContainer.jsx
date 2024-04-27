@@ -10,13 +10,13 @@ const CatalogContainer = () => {
         <h1 className=" text-stone-800 font-bold text-2xl">Catalog</h1>
       </div>
       <div className=" flex flex-col gap-2">
-        <h1 className=" text-stone-800 font-bold text-lg">Catalog</h1>
+        <h1 className=" text-stone-800 font-bold text-lg">Metastores</h1>
         <p className=" text-sm font-medium text-stone-600">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-          inventore nesciunt obcaecati non veniam tempora in corrupti ratione
-          fugiat itaque excepturi rerum, eius aut ab exercitationem quibusdam
-          nobis perspiciatis suscipit omnis fuga doloribus. Laboriosam tempore
-          ducimus enim magnam commodi repellendus!
+          A metastore is the top-level container for catalog in Unity Catalog.
+          Within a metastore, Unity Catalog provides a 3-level namespace for
+          organizing data: catalogs, schemas (also called databases), and
+          tables/views.
+          <span className=" text-[#2c77b6]">Learn More</span>{" "}
         </p>
       </div>
       <div className=" flex items-center justify-between w-full">
@@ -26,7 +26,7 @@ const CatalogContainer = () => {
           </div>
           <input
             className=" border-r border-y border-stone-300 py-1 px-2 rounded-r-md text-sm placeholder:text-stone-400"
-            placeholder="Filter workspaces"
+            placeholder="Filter metastores"
             type="text"
           />
         </div>

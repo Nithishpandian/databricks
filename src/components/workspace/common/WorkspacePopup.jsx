@@ -55,16 +55,21 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
                 />
               </div>
               <p className=" text-stone-700 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                We're going to send you to your AWS Console to configure your
+                account.
               </p>
               <p className=" text-stone-700 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                magnam omnis perferendis quia blanditiis numquam!
+                Once you sign in, we'll pre-populate a CloudFormation template
+                that creates an IAM role and S3 bucket for you, then deploys
+                your workspace.
               </p>
               <p className=" text-stone-700 text-sm">
-                Lorem ipsum dolor sit amet consectetur
-                <span className=" text-[#2c77b6]"> adipisicing elit</span>{" "}
-                Minima quae inventore nostrum quis?
+                If you encounter any errors during the process, reach out at
+                <span className=" text-[#2c77b6]">
+                  {" "}
+                  onboarding-help.databricks.com
+                </span>{" "}
+                for troubleshooting guidance.
               </p>
               <div className=" py-4 flex flex-col gap-4">
                 <div className=" flex flex-col gap-2">
@@ -78,8 +83,7 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
                       type="text"
                     />
                     <p className=" text-xs text-green-700">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Consectetur, inventore.
+                      Human readable name for your workspace
                     </p>
                   </div>
                 </div>
@@ -104,8 +108,7 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
                     </FormControl>
 
                     <p className=" text-xs text-green-700">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Consectetur, inventore.
+                      AWS Region where the workspace will be created
                     </p>
                   </div>
                 </div>
@@ -130,7 +133,7 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
             <>
               <div className=" flex items-center w-full justify-between">
                 <h1 className=" text-stone-800 font-bold text-2xl">
-                  Workspaces
+                  Create Workspaces
                 </h1>
                 <IoClose
                   className=" text-stone-700 text-2xl cursor-pointer"
@@ -138,45 +141,53 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
                 />
               </div>
               <p className=" text-sm text-stone-700">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                quod doloribus voluptates quae ad amet,
+                A workspace is an environment to access all of your Databricks
+                data assets and computational resources.
                 <span className=" text-[#2c77b6]"> Learn more.</span>
               </p>
               <p className=" text-sm text-stone-700">
                 How would you like to create your workspace
               </p>
               <div className=" grid grid-cols-2 gap-2">
-                {["Quickstart (Recommended)", "Another Option"].map(
-                  (option, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start gap-2 py-3 px-3 border-2 rounded-md cursor-pointer ${
-                        selectedWorkspace === index
-                          ? "border-[#2273b4]"
-                          : "border-stone-300"
-                      }`}
-                      onClick={() => handleWorkspaceChange(index)}
-                    >
-                      <input
-                        className="mt-1"
-                        type="radio"
-                        name="workspace"
-                        id={`workspace-${index}`}
-                        checked={selectedWorkspace === index}
-                        onChange={() => handleWorkspaceChange(index)}
-                      />
-                      <div className="flex flex-col gap-1 text-sm">
-                        <h1 className="text-stone-700 font-semibold">
-                          {option}
-                        </h1>
-                        <p className="text-xs text-stone-600 font-medium">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Aspernatur, aperiam?
-                        </p>
-                      </div>
+                {[
+                  {
+                    title: "Quickstart (Recommended)",
+                    description:
+                      "Use Quickstart to create a workspace in just a few clicks",
+                  },
+                  {
+                    title: "Manual",
+                    description:
+                      "Typically for advanced users with AWS experience. You will need to create your own storage and credentials configurations",
+                  },
+                ].map((option, index) => (
+                  <div
+                    key={index}
+                    className={`flex items-start gap-2 py-3 px-3 border-2 rounded-md cursor-pointer ${
+                      selectedWorkspace === index
+                        ? "border-[#2273b4]"
+                        : "border-stone-300"
+                    }`}
+                    onClick={() => handleWorkspaceChange(index)}
+                  >
+                    <input
+                      className="mt-1"
+                      type="radio"
+                      name="workspace"
+                      id={`workspace-${index}`}
+                      checked={selectedWorkspace === index}
+                      onChange={() => handleWorkspaceChange(index)}
+                    />
+                    <div className="flex flex-col gap-1 text-sm">
+                      <h1 className="text-stone-700 font-semibold">
+                        {option.title}
+                      </h1>
+                      <p className="text-xs text-stone-600 font-medium">
+                        {option.description}
+                      </p>
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
               <div className="flex justify-end items-center gap-2">
                 <button

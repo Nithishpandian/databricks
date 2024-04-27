@@ -4,9 +4,14 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import { IoIosArrowDown } from "react-icons/io";
-import { MdWorkspaces } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { MdWorkspaces } from "react-icons/md";
+import { GrCatalogOption } from "react-icons/gr";
+import { FaChartLine } from "react-icons/fa6";
+import { LuUsers } from "react-icons/lu";
+import { IoIosOptions } from "react-icons/io";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const HomeSection = () => {
   return (
@@ -16,30 +21,71 @@ const HomeSection = () => {
         Manage your Databricks account at scale
       </p>
       <div className=" grid grid-cols-3 gap-4 py-3">
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
-        <AccountCard />
+        <AccountCard
+          icon={<MdWorkspaces />}
+          title={"Workspaces"}
+          description={
+            "Configure workspace settings. Workspaces contain notebooks, libraries, queries, and workflows"
+          }
+        />
+        <AccountCard
+          icon={<GrCatalogOption />}
+          title={"Catalog"}
+          description={
+            "Manage metastores as your top-level container for catalogs, schemas (also called databases), views and tables"
+          }
+        />
+        <AccountCard
+          icon={<FaChartLine />}
+          title={"Usage"}
+          description={
+            "View usage details and graphs for your account in Databricks Units (DBU) or estimated costs (in $USD)"
+          }
+        />
+        <AccountCard
+          icon={<LuUsers />}
+          title={"Users & groups"}
+          description={
+            "Manage identities for use with jobs, automated tools and systems"
+          }
+        />
+        <AccountCard
+          icon={<IoIosOptions />}
+          title={"Cloud resources"}
+          description={
+            "Manage IAM credentials, VPC configurations and S3 bucket permissions for your AWS services Settings"
+          }
+        />
+        <AccountCard
+          icon={<IoSettingsOutline />}
+          title={"settings"}
+          description={
+            "Configure your Databricks account single sign-on, user provisioning, subscription, and billing"
+          }
+        />
       </div>
       <div className=" flex flex-col gap-1.5">
-        <h1 className=" text-stone-800 font-bold text-2xl">Account console</h1>
+        <h1 className=" text-stone-800 font-bold text-2xl">
+          Create a workspace
+        </h1>
         <p className=" text-stone-500 text-sm font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          beatae ad quisquam non minus sunt, dolores, sapiente iusto quidem
-          eveniet ipsam. Maxime incidunt ex similique, id, laudantium deleniti
-          possimus{" "}
-          <span className=" text-[#2c77b6]">assumenda fuga inventore</span>{" "}
-          explicabo natus voluptatibus hic vel perferendis, saepe delectus?
+          Your workspace is the environment for doing work in Databricks. To
+          create your first Databricks workspace, you need an existing AWS
+          account. If you don't have an AWS account, you can sign up for an AWS
+          Free Tier account at{" "}
+          <span className=" text-[#2c77b6]">https://aws.amazon.com/free/.</span>{" "}
+          We highly recommend creating a workspace via Quick Start which
+          automates most of the process for you.
         </p>
         <p className=" text-stone-500 text-sm font-medium">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          unde voluptatum, at porro tempora reprehenderit{" "}
-          <span className=" text-[#2c77b6]">assumenda fuga inventore</span>
+          If you want help setting up your account, please reach out to us at
+          <span className=" text-[#2c77b6]">
+            {" "}
+            onboarding-help@databricks.com.
+          </span>
         </p>
-        <div className=" flex flex-col ">
-          <Accordion defaultExpanded>
+        <div className=" flex flex-col gap-1 py-1">
+          <Accordion className=" border border-stone-300" defaultExpanded>
             <AccordionSummary
               expandIcon={<IoIosArrowDown />}
               aria-controls="panel1-content"
@@ -51,7 +97,8 @@ const HomeSection = () => {
                     <MdWorkspaces />
                   </div>
                   <p className=" text-stone-800 font-medium ">
-                    Create a workspace with a prepackaged AWS
+                    Create a workspace with a prepackaged AWS Quick Start
+                    (Recommended)
                   </p>
                 </div>
                 <div>
@@ -66,8 +113,7 @@ const HomeSection = () => {
                 <div className=" flex items-center gap-2">
                   <FaRegCheckCircle />
                   <p className=" text-sm font-medium text-stone-800 pr-4">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor, ab.
+                    Learn how Quick Start works
                   </p>
                 </div>
                 <div>
@@ -78,8 +124,7 @@ const HomeSection = () => {
                 <div className=" flex items-center gap-2">
                   <FaRegCheckCircle />
                   <p className=" text-sm font-medium text-stone-800 pr-4">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor, ab.
+                    Start Quick Start
                   </p>
                 </div>
                 <div>
@@ -88,7 +133,7 @@ const HomeSection = () => {
               </div>
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion className=" border border-stone-300">
             <AccordionSummary
               expandIcon={<IoIosArrowDown />}
               aria-controls="panel1-content"
@@ -100,7 +145,7 @@ const HomeSection = () => {
                     <MdWorkspaces />
                   </div>
                   <p className=" text-stone-800 font-medium ">
-                    Create a workspace with a prepackaged AWS
+                    Explore other workspace creation options
                   </p>
                 </div>
                 <div>
@@ -115,8 +160,7 @@ const HomeSection = () => {
                 <div className=" flex items-center gap-2">
                   <FaRegCheckCircle />
                   <p className=" text-sm font-medium text-stone-800 pr-4">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor, ab.
+                    Learn how Quick Start works
                   </p>
                 </div>
                 <div>
@@ -127,8 +171,7 @@ const HomeSection = () => {
                 <div className=" flex items-center gap-2">
                   <FaRegCheckCircle />
                   <p className=" text-sm font-medium text-stone-800 pr-4">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolor, ab.
+                    Start Quick Start
                   </p>
                 </div>
                 <div>

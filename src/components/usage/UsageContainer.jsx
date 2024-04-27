@@ -15,8 +15,8 @@ const UsageContainer = () => {
         <h1 className=" text-stone-700 font-bold text-2xl">Usage</h1>
       </div>
       <p className=" w-96 text-sm text-stone-700">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod
-        doloribus voluptates quae ad laborum blanditiis reprehenderit amet,
+        View a graph of account usage in DBUS or estimated cost in $USD. You can
+        aggregate data by workspace, by SKU (compute type) or by tags.
         <span className=" text-[#2c77b6]"> Learn more.</span>
       </p>
       <div className=" flex items-center justify-between w-full">
@@ -60,9 +60,7 @@ const UsageContainer = () => {
       </div>
       <div className=" flex items-center gap-2 border border-stone-300 bg-slate-50 py-1 px-3 rounded text-stone-700 font-medium w-fit">
         <IoMdInformationCircle />
-        <p className=" text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing.
-        </p>
+        <p className=" text-sm">Usage last updated: 04-19-2024 00:59:59 UTC</p>
         <IoClose className=" text-lg" />
       </div>
       <div className=" flex items-center justify-center py-20 px-10 text-stone-700 font-medium">
@@ -70,8 +68,8 @@ const UsageContainer = () => {
       </div>
       <h1 className=" text-stone-700 font-bold text-2xl">Usage details</h1>
       <p className=" w-96 text-sm text-stone-700">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quod
-        reprehenderit amet,
+        View a table of account usage in DBUS or estimated cost in $USD. All
+        usage is aggregated by workspace.
         <span className=" text-[#2c77b6]"> Learn more.</span>
       </p>
       <div className=" flex items-center gap-4">
@@ -108,14 +106,12 @@ const UsageContainer = () => {
           />
         </div>
         <div className=" rounded border border-stone-300 py-1 px-4 text-stone-500 font-medium text-sm">
-          March 20 2024 - April 19 2024 UTC
+          March 19 2024 - April 18 2024 UTC
         </div>
       </div>
       <div className=" flex items-center gap-2 border border-stone-300 bg-slate-50 py-1 px-3 rounded text-stone-700 font-medium w-fit">
         <IoMdInformationCircle />
-        <p className=" text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing.
-        </p>
+        <p className=" text-sm">Usage last updated: 04-17-2024 00:59:59 UTC</p>
         <IoClose className=" text-lg" />
       </div>
       <table className="">
