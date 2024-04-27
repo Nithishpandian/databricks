@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import workspaceImg from "../../assets/workspace/workspace-img.png";
+import WorkspacePopup from "./common/WorkspacePopup";
 
 const WorkspaceContainer = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className=" flex flex-col gap-4 p-4 w-full">
       <div className=" flex items-center justify-between w-full">
         <h1 className=" text-stone-800 font-bold text-2xl">Workspaces</h1>
-        <button className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded">
+        <button
+          onClick={handleClickOpen}
+          className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded"
+        >
           Create workspace
         </button>
       </div>
@@ -44,12 +58,21 @@ const WorkspaceContainer = () => {
             Accusantium, fuga.
           </p>
           <div className=" flex items-center justify-center">
-            <button className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded">
+            <button
+              onClick={handleClickOpen}
+              className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded"
+            >
               Create workspace
             </button>
           </div>
         </div>
       </div>
+      <WorkspacePopup
+        open={open}
+        setOpen={setOpen}
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+      />
     </div>
   );
 };
