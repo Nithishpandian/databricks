@@ -42,7 +42,7 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <div className=" py-4 px-5 min-w-[500px] flex flex-col gap-4">
+        <div className=" py-4 px-5 w-fit sm:min-w-[500px] flex flex-col gap-4">
           {currentPage === 2 ? (
             <>
               <div className=" flex items-center w-full justify-between">
@@ -148,7 +148,7 @@ const WorkspacePopup = ({ open, handleClickOpen, handleClose }) => {
               <p className=" text-sm text-stone-700">
                 How would you like to create your workspace
               </p>
-              <div className=" grid grid-cols-2 gap-2">
+              <div className=" grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {[
                   {
                     title: "Quickstart (Recommended)",

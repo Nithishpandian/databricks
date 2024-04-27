@@ -20,7 +20,7 @@ const UsageContainer = () => {
         <span className=" text-[#2c77b6]"> Learn more.</span>
       </p>
       <div className=" flex items-center justify-between w-full">
-        <div className=" flex items-center gap-4">
+        <div className=" flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-4">
           <div className=" text-sm">
             <span
               onClick={() => setUsageCurrency(0)}
@@ -63,7 +63,7 @@ const UsageContainer = () => {
         <p className=" text-sm">Usage last updated: 04-19-2024 00:59:59 UTC</p>
         <IoClose className=" text-lg" />
       </div>
-      <div className=" flex items-center justify-center py-20 px-10 text-stone-700 font-medium">
+      <div className=" flex items-center justify-center text-sm sm:text-base py-20 px-10 text-stone-700 font-medium">
         <p>No usage date found in the given time range</p>
       </div>
       <h1 className=" text-stone-700 font-bold text-2xl">Usage details</h1>
@@ -72,7 +72,7 @@ const UsageContainer = () => {
         usage is aggregated by workspace.
         <span className=" text-[#2c77b6]"> Learn more.</span>
       </p>
-      <div className=" flex items-center gap-4">
+      <div className=" flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-4">
         <div className=" text-sm">
           <span
             onClick={() => setUsageCurrency(0)}
@@ -105,7 +105,7 @@ const UsageContainer = () => {
             type="text"
           />
         </div>
-        <div className=" rounded border border-stone-300 py-1 px-4 text-stone-500 font-medium text-sm">
+        <div className=" rounded border border-stone-300 py-1 px-4 text-stone-500 font-medium text-sm w-fit">
           March 19 2024 - April 18 2024 UTC
         </div>
       </div>
@@ -115,7 +115,7 @@ const UsageContainer = () => {
         <IoClose className=" text-lg" />
       </div>
       <table className="">
-        <tr className=" text-stone-700 text-sm border-b border-stone-300 pb-2">
+        <tr className=" text-stone-700 text-xs sm:text-sm border-b border-stone-300 pb-2">
           <th>Name</th>
           <th>Total dollars spent</th>
           <th>Jobs</th>

@@ -19,7 +19,7 @@ const CatalogContainer = () => {
           <span className=" text-[#2c77b6]">Learn More</span>{" "}
         </p>
       </div>
-      <div className=" flex items-center justify-between w-full">
+      <div className=" flex flex-col sm:flex-row gap-2 sm:items-center justify-between w-full">
         <div className=" flex">
           <div className=" border-l border-y border-stone-300 pt-1.5 px-2 rounded-l-md">
             <CiSearch />
@@ -30,12 +30,12 @@ const CatalogContainer = () => {
             type="text"
           />
         </div>
-        <button className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded">
+        <button className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded w-fit">
           Create metastore
         </button>
       </div>
       <table className="">
-        <tr className=" text-stone-700 text-sm border-b border-stone-300">
+        <tr className=" text-stone-700 text-xs sm:text-sm border-b border-stone-300">
           <th>Name</th>
           <th>Region</th>
           <th>Path</th>
@@ -51,7 +51,7 @@ const CatalogContainer = () => {
           <td></td>
           <td></td>
           <td className=" py-4 flex flex-col items-center justify-center">
-            <TfiMenuAlt className=" text-7xl text-slate-400" />
+            <TfiMenuAlt className=" text-5xl sm:text-7xl text-slate-400" />
             <p className=" text-slate-400 text-sm font-medium">No metastores</p>
           </td>
           <td></td>

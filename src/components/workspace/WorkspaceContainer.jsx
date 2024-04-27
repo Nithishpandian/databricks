@@ -16,11 +16,11 @@ const WorkspaceContainer = () => {
 
   return (
     <div className=" flex flex-col gap-4 p-4 w-full">
-      <div className=" flex items-center justify-between w-full">
+      <div className=" flex flex-col sm:flex-row gap-2 sm:items-center justify-between w-full">
         <h1 className=" text-stone-800 font-bold text-2xl">Workspaces</h1>
         <button
           onClick={handleClickOpen}
-          className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded"
+          className=" text-white font-medium bg-sky-800 text-sm px-4 py-1 rounded w-fit"
         >
           Create workspace
         </button>
@@ -36,7 +36,7 @@ const WorkspaceContainer = () => {
         </div>
       </div>
       <table className="">
-        <tr className=" text-stone-700 text-base border-b border-stone-300">
+        <tr className=" text-stone-700 text-xs sm:text-base border-b border-stone-300">
           <th>Name</th>
           <th>Status</th>
           <th>Pricing tier</th>

@@ -20,7 +20,7 @@ const HomeSection = () => {
       <p className=" text-stone-500 text-sm font-medium">
         Manage your Databricks account at scale
       </p>
-      <div className=" grid grid-cols-3 gap-4 py-3">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-3">
         <AccountCard
           icon={<MdWorkspaces />}
           title={"Workspaces"}
@@ -68,7 +68,7 @@ const HomeSection = () => {
         <h1 className=" text-stone-800 font-bold text-2xl">
           Create a workspace
         </h1>
-        <p className=" text-stone-500 text-sm font-medium">
+        <p className=" text-stone-500 text-xs sm:text-sm font-medium">
           Your workspace is the environment for doing work in Databricks. To
           create your first Databricks workspace, you need an existing AWS
           account. If you don't have an AWS account, you can sign up for an AWS
@@ -77,7 +77,7 @@ const HomeSection = () => {
           We highly recommend creating a workspace via Quick Start which
           automates most of the process for you.
         </p>
-        <p className=" text-stone-500 text-sm font-medium">
+        <p className=" text-stone-500 text-xs sm:text-sm font-medium">
           If you want help setting up your account, please reach out to us at
           <span className=" text-[#2c77b6]">
             {" "}
@@ -96,13 +96,13 @@ const HomeSection = () => {
                   <div className=" text-white bg-teal-700 p-1.5 rounded">
                     <MdWorkspaces />
                   </div>
-                  <p className=" text-stone-800 font-medium ">
+                  <p className=" text-stone-800 font-medium text-xs sm:text-sm md:text-base ">
                     Create a workspace with a prepackaged AWS Quick Start
                     (Recommended)
                   </p>
                 </div>
                 <div>
-                  <p className=" text-sm font-medium text-stone-800 pr-4">
+                  <p className=" text-xs sm:text-sm font-medium text-stone-800 pr-4">
                     Not started
                   </p>
                 </div>
@@ -144,12 +144,12 @@ const HomeSection = () => {
                   <div className=" text-white bg-teal-700 p-1.5 rounded">
                     <MdWorkspaces />
                   </div>
-                  <p className=" text-stone-800 font-medium ">
+                  <p className=" text-stone-800 font-medium text-xs sm:text-sm md:text-base ">
                     Explore other workspace creation options
                   </p>
                 </div>
                 <div>
-                  <p className=" text-sm font-medium text-stone-800 pr-4">
+                  <p className=" text-xs sm:text-sm font-medium text-stone-800 pr-4">
                     Not started
                   </p>
                 </div>
