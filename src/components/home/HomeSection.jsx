@@ -13,9 +13,9 @@ import { LuUsers } from "react-icons/lu";
 import { IoIosOptions } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
 
-const HomeSection = () => {
+const HomeSection = ({ mode }) => {
   return (
-    <div className=" p-4 xl:pr-44">
+    <div className={` ${mode === "Collapse" && " ml-12"} p-4 xl:pr-44`}>
       <h1 className=" text-stone-800 font-bold text-2xl">Account console</h1>
       <p className=" text-stone-500 text-sm font-medium">
         Manage your Databricks account at scale

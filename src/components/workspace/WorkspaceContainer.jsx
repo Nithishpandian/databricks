@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import workspaceImg from "../../assets/workspace/workspace-img.png";
 import WorkspacePopup from "./common/WorkspacePopup";
 
-const WorkspaceContainer = () => {
+const WorkspaceContainer = ({ mode }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -15,7 +15,11 @@ const WorkspaceContainer = () => {
   };
 
   return (
-    <div className=" flex flex-col gap-4 p-4 w-full">
+    <div
+      className={` ${
+        mode === "Collapse" && " ml-12"
+      } flex flex-col gap-4 p-4 w-full`}
+    >
       <div className=" flex flex-col sm:flex-row gap-2 sm:items-center justify-between w-full">
         <h1 className=" text-stone-800 font-bold text-2xl">Workspaces</h1>
         <button

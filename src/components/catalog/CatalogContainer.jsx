@@ -3,9 +3,13 @@ import { CiSearch } from "react-icons/ci";
 import { RiMenuAddLine } from "react-icons/ri";
 import { TfiMenuAlt } from "react-icons/tfi";
 
-const CatalogContainer = () => {
+const CatalogContainer = ({ mode }) => {
   return (
-    <div className=" flex flex-col gap-4 p-4 w-full">
+    <div
+      className={` ${
+        mode === "Collapse" && " ml-12"
+      } flex flex-col gap-4 p-4 w-full`}
+    >
       <div className=" flex items-center justify-between w-full border-b-2 border-stone-300 pb-1.5">
         <h1 className=" text-stone-800 font-bold text-2xl">Catalog</h1>
       </div>

@@ -7,10 +7,14 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { CiSearch } from "react-icons/ci";
 import { TfiMenuAlt } from "react-icons/tfi";
 
-const UsageContainer = () => {
+const UsageContainer = ({ mode }) => {
   const [usageCurrency, setUsageCurrency] = useState(0);
   return (
-    <div className=" flex flex-col gap-3 p-4 w-full">
+    <div
+      className={` ${
+        mode === "Collapse" && " ml-12"
+      } flex flex-col gap-3 p-4 w-full`}
+    >
       <div className=" flex items-center justify-between w-full border-b-2 border-stone-300 pb-1.5">
         <h1 className=" text-stone-700 font-bold text-2xl">Usage</h1>
       </div>
