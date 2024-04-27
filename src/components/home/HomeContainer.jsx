@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeSection from "./HomeSection";
 import WorkspaceContainer from "../workspace/WorkspaceContainer";
 import CatalogContainer from "../catalog/CatalogContainer";
+import UsageContainer from "../usage/UsageContainer";
 
 const HomeContainer = () => {
   return (
@@ -16,6 +17,7 @@ const HomeContainer = () => {
           <Route index path="/" element={<HomeSection />} />
           <Route path="/workspaces" element={<WorkspaceContainer />} />
           <Route path="/catalog" element={<CatalogContainer />} />
+          <Route path="/usage" element={<UsageContainer />} />
           <Route path="*" element={<HomeSection />} />
         </Routes>
       </div>
