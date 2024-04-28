@@ -8,7 +8,7 @@ import CatalogContainer from "../catalog/CatalogContainer";
 import UsageContainer from "../usage/UsageContainer";
 
 const HomeContainer = () => {
-  const [mode, setMode] = useState("Expand");
+  const [mode, setMode] = useState("Collapse");
   return (
     <div className=" flex flex-col h-screen">
       <Navbar />
